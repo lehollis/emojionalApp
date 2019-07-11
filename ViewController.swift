@@ -15,8 +15,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    let emojis = ["🏊‍♀️": "swimming", "🚣‍♀️": "rowing"]
+    
     @IBAction func showMessage(sender:UIButton){
         //if user clicks button, show alert that has something to do with that sport
+        let selectedSport = sender.titleLabel?.text
+        
         let alertController = UIAlertController(title: "This is an alert", message: "Hello!", preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         present(alertController, animated: true, completion: nil)
